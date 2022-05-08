@@ -1,4 +1,4 @@
-package com.helloworld;
+package com.davidwidjaya.todolist;
 
 import com.facebook.react.ReactActivity;
 
@@ -16,7 +16,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "HelloWorld";
+    return "ToDoList";
   }
 
   /**

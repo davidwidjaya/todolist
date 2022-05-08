@@ -1,9 +1,9 @@
 {
-  "name": "CafeQ",
-  "displayName": "CafeQ",
+  "name": "ToDoList",
+  "displayName": "ToDoList",
   "expo": {
-    "name": "CafeQ",
-    "slug": "CafeQ",
+    "name": "ToDoList",
+    "slug": "ToDoList",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
