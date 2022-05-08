@@ -12,66 +12,66 @@ var blacklist = [
 export class Helper {
 
     static formatThousand(num) {
-		num = num.toString().replace(/\$|\,/g, '');
-		if (isNaN(num)) {
-			num = "";
-		}
+        num = num.toString().replace(/\$|\,/g, '');
+        if (isNaN(num)) {
+            num = "";
+        }
 
-		var sign = (num == (num = Math.abs(num)));
-		num = Math.floor(num * 100 + 0.50000000001);
-		cents = num % 100;
-		num = Math.floor(num / 100).toString();
+        var sign = (num == (num = Math.abs(num)));
+        num = Math.floor(num * 100 + 0.50000000001);
+        cents = num % 100;
+        num = Math.floor(num / 100).toString();
 
-		if (cents < 10) {
-			cents = "0" + cents;
-		}
-		for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
-			num = num.substring(0, num.length - (4 * i + 3)) + '.' + num.substring(num.length - (4 * i + 3));
-		}
+        if (cents < 10) {
+            cents = "0" + cents;
+        }
+        for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
+            num = num.substring(0, num.length - (4 * i + 3)) + '.' + num.substring(num.length - (4 * i + 3));
+        }
 
-		return (((sign) ? '' : '-') + num);
+        return (((sign) ? '' : '-') + num);
     }
-    
+
     static formatMonthString(num) {
         var paramMonth = num;
 
-        if(paramMonth == 1){
+        if (paramMonth == 1) {
             return "January"
         }
-        else if(paramMonth == 2){
+        else if (paramMonth == 2) {
             return "February"
         }
-        else if(paramMonth == 3){
+        else if (paramMonth == 3) {
             return "March"
         }
-        else if(paramMonth == 4){
+        else if (paramMonth == 4) {
             return "April"
         }
-        else if(paramMonth == 5){
+        else if (paramMonth == 5) {
             return "May"
         }
-        else if(paramMonth == 6){
+        else if (paramMonth == 6) {
             return "June"
         }
-        else if(paramMonth == 7){
+        else if (paramMonth == 7) {
             return "July"
         }
-        else if(paramMonth == 8){
+        else if (paramMonth == 8) {
             return "August"
         }
-        else if(paramMonth == 9){
+        else if (paramMonth == 9) {
             return "September"
         }
-        else if(paramMonth == 10){
+        else if (paramMonth == 10) {
             return "October"
         }
-        else if(paramMonth == 11){
+        else if (paramMonth == 11) {
             return "November"
         }
-        else if(paramMonth == 12){
+        else if (paramMonth == 12) {
             return "December"
         }
-        else{
+        else {
             return ""
         }
     }
@@ -88,8 +88,8 @@ export class Helper {
     static blacklist_error(message) {
         var str = true;
 
-        blacklist.map((item, key)=>{
-            if(message.toLowerCase().includes(item.str)){
+        blacklist.map((item, key) => {
+            if (message.toLowerCase().includes(item.str)) {
                 str = false;
             }
         });
@@ -119,8 +119,22 @@ export class Helper {
         var transTime = transDate_time[1].split(":");
         var hour = transTime[0];
         var min = transTime[1];
-        var waktu = hour + ":" + min ;
+        var waktu = hour + ":" + min;
 
         return waktu;
+    }
+
+    static formatTimestamp(newDate) {
+        let date = new Date(newDate);
+        let dateFormat =
+            date.getDate() +
+            ' ' +
+            date.toLocaleDateString('default', { month: 'long' }) +
+            ' ' +
+            ('0' + date.getHours()).slice(-2) +
+            ':' +
+            ('0' + date.getMinutes()).slice(-2);
+
+        return dateFormat;
     }
 }

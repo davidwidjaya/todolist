@@ -1,195 +1,181 @@
 import { Dimensions } from "react-native"
+import { color } from './color';
 
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
 
 export const MainStyle = {
     font_numans: {
-        fontFamily: "Cabin-Regular"
+        fontFamily: "Poppins-Regular"
     },
     font_1: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 1
     },
     font_2: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 2
     },
     font_3: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 3
     },
     font_4: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 4
     },
     font_5: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 5
     },
     font_6: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 6
     },
     font_7: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 7
     },
     font_8: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 8
     },
     font_9: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 9
     },
     font_10: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 10
     },
     font_11: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 11
     },
     font_12: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 12
     },
     font_13: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 13
     },
     font_14: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 14
     },
     font_15: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 15
     },
     font_16: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 16
     },
     font_17: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 17
     },
     font_18: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 18
     },
     font_19: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 19
     },
     font_20: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 20
     },
     font_21: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 21
     },
     font_22: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 22
     },
     font_23: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 23
     },
     font_24: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 24
     },
     font_25: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 25
     },
     font_26: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 26
     },
     font_27: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 27
     },
     font_28: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 28
     },
     font_29: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 29
     },
     font_30: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 30
     },
     font_31: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 31
     },
     font_32: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 32
     },
     font_33: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 33
     },
     font_34: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 34
     },
     font_35: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 35
     },
     font_36: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 36
     },
     font_37: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 37
     },
     font_38: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 38
     },
     font_39: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 39
     },
     font_40: {
-        fontFamily: "Cabin-Regular",
+        fontFamily: "Poppins-Regular",
         fontSize: 40
     },
-    font_thin: {
-        fontWeight: "100"
-    },
-    font_ultra_light: {
-        fontWeight: "200"
-    },
-    font_light: {
-        fontWeight: "300"
-    },
-    font_regular: {
-        fontWeight: "400"
-    },
     font_medium: {
-        fontWeight: "500"
-    },
-    font_semibold: {
-        fontWeight: "600"
-    },
-    font_heavy: {
-        fontWeight: "800"
+        fontFamily: "Poppins-Medium",
     },
     font_bold: {
-        fontWeight: "bold"
+        fontFamily: "Poppins-Bold",
+    },
+    font_semibold: {
+        fontFamily: "Poppins-SemiBold",
     },
     font_italic: {
         fontStyle: "italic"
@@ -197,6 +183,42 @@ export const MainStyle = {
     font_underline: {
         textDecorationLine: "underline"
     },
+
+    //new backgroundcolor
+    bgcolor_black_primary:{
+        backgroundColor: "#111111"
+    },
+    bgcolor_blue_primary:{
+        backgroundColor: "#16ABF8"
+    },
+    bgcolor_white_primary:{
+        backgroundColor: "#FFFFFF"
+    },
+    //new color
+    color_black_primary:{
+        color: "#111111"
+    },
+    color_blue_primary:{
+        color: "#16ABF8"
+    },
+    color_white_primary:{
+        color: "#FFFFFF"
+    },
+    color_grey_primary:{
+        color: "#888888"
+    },
+    color_grey_secondary:{
+        color: "#D8D8D8"
+    },
+    color_grey_third:{
+        color: "#A4A4A4"
+    },
+    color_grey_forth:{
+        color: "#E5E5E5"
+    },
+
+
+    //old
     bg_color_grey_light:{
         backgroundColor: "#E8E8E8"
     },
@@ -243,6 +265,14 @@ export const Styles = {
     size_10: {
         width: 0.027*deviceWidth,
         height: 0.027*deviceWidth,
+    },
+    size_7: {
+        width: 0.01944*deviceWidth,
+        height: 0.01944*deviceWidth,
+    },
+    size_12: {
+        width: 0.0333*deviceWidth,
+        height: 0.0333*deviceWidth,
     },
     size_16: {
         width: 0.044*deviceWidth,

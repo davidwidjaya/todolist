@@ -7,7 +7,7 @@ _config = {
 	// API_URL: "https://service-mart.000webhostapp.com",
   	WEB_URL: "https://servicemart.my.id",
   	ASSETS_URL: "https://servicemart.my.id",
-	API_URL: "http://192.168.1.12",
+	API_URL: "https://todo.api.devcode.gethired.id",
 }
 
 export const CONFIG = _config;

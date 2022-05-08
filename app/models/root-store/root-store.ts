@@ -52,6 +52,42 @@ export const RootStoreModel = types.model("RootStore").props({
       }
       return res;
     },
+    async getListActivity(content) {
+      var res = await ApiInstance.getListActivity(content);
+      if (res.kind == "ok") {
+      }
+      else if (res.kind == 'wrong') {
+        console.log(res.message);
+      }
+      else {
+        actionError(res, self);
+      }
+      return res;
+    },
+    async getListItem(content) {
+      var res = await ApiInstance.getListItem(content);
+      if (res.kind == "ok") {
+      }
+      else if (res.kind == 'wrong') {
+        console.log(res.message);
+      }
+      else {
+        actionError(res, self);
+      }
+      return res;
+    },
+    async createTodo(content) {
+      var res = await ApiInstance.createTodo(content);
+      if (res.kind == "ok") {
+      }
+      else if (res.kind == 'wrong') {
+        console.log(res.message);
+      }
+      else {
+        actionError(res, self);
+      }
+      return res;
+    },
   }))
 
 /**

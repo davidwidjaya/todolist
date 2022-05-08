@@ -51,7 +51,7 @@ export class Api {
    */
 
 
-   async getAllMenu(data): Promise<Types.GetDefaultResult> {
+  async getAllMenu(data): Promise<Types.GetDefaultResult> {
     this.apisauce.setHeader('Accept', 'application/json');
     this.apisauce.setHeader('Content-Type', 'application/json');
     this.apisauce.setHeader('token', global.bearer_token);
@@ -77,6 +77,116 @@ export class Api {
       }
       if (response.data.status == 'success') {
         const resultData: Types.AppDefault = response.data.data;
+        return { kind: "ok", data: resultData }
+      } else {
+        const resultData: Types.AppDefault = response.data.message;
+        return { kind: "wrong", message: resultData }
+      }
+
+    } catch {
+      return { kind: "bad-data", msg: response.data.message }
+    }
+  }
+  async getListActivity(data): Promise<Types.GetDefaultResult> {
+    this.apisauce.setHeader('Accept', 'application/json');
+    this.apisauce.setHeader('Content-Type', 'application/json');
+    // this.apisauce.setHeader('token', global.bearer_token);
+
+    let response: ApiResponse<any>;
+    let path = `/activity-groups?email=yoga%2B1%40skyshi.io`;
+
+    if (data._parts.length == 0) {
+      response = await this.apisauce.get(path)
+    }
+    else {
+      response = await this.apisauce.get(path, data)
+    }
+
+    if (response.data.status == "error") {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+
+    try {
+      // console.log(response.data);
+      if (response.data) {
+        const result = response.data;
+      }
+      if (response.data) {
+        const resultData: Types.AppDefault = response.data;
+        return { kind: "ok", data: resultData }
+      } else {
+        const resultData: Types.AppDefault = response.data.message;
+        return { kind: "wrong", message: resultData }
+      }
+
+    } catch {
+      return { kind: "bad-data", msg: response.data.message }
+    }
+  }
+  async getListItem(data): Promise<Types.GetDefaultResult> {
+    this.apisauce.setHeader('Accept', 'application/json');
+    this.apisauce.setHeader('Content-Type', 'application/json');
+    // this.apisauce.setHeader('token', global.bearer_token);
+
+    let response: ApiResponse<any>;
+    let path = `/todo-items`;
+
+    if (data._parts.length == 0) {
+      response = await this.apisauce.get(path)
+    }
+    else {
+      response = await this.apisauce.get(path, data)
+    }
+
+    if (response.data.status == "error") {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+
+    try {
+      // console.log(response.data);
+      if (response.data) {
+        const result = response.data;
+      }
+      if (response.data) {
+        const resultData: Types.AppDefault = response.data;
+        return { kind: "ok", data: resultData }
+      } else {
+        const resultData: Types.AppDefault = response.data.message;
+        return { kind: "wrong", message: resultData }
+      }
+
+    } catch {
+      return { kind: "bad-data", msg: response.data.message }
+    }
+  }
+
+  async createTodo(data): Promise<Types.GetDefaultResult> {
+    this.apisauce.setHeader('Accept', 'application/json');
+    this.apisauce.setHeader('Content-Type', 'application/json');
+
+    let response: ApiResponse<any>;
+    let path = `/todo-items`;
+
+    if (data._parts.length == 0) {
+      response = await this.apisauce.post(path)
+    }
+    else {
+      response = await this.apisauce.post(path, data)
+    }
+
+    if (response.data.status == "error") {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+
+    try {
+      if (response.data) {
+        const result = response.data;
+      }
+      if (response.data) {
+        const resultData: Types.AppDefault = response.data;
         return { kind: "ok", data: resultData }
       } else {
         const resultData: Types.AppDefault = response.data.message;

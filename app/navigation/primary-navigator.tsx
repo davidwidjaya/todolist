@@ -3,6 +3,8 @@ import React from "react"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   BootstrapScreen,
+  HomeScreen,
+  ListScreen,
 } from "../screens"
 
 import { PrimaryParamList } from "./types"
@@ -16,9 +18,11 @@ export function PrimaryNavigator() {
         headerShown: false,
         gestureEnabled: true,
       }}
+      initialRouteName={"home"}
     >
-      {/* <Stack.Screen name="welcome" component={WelcomeScreen} /> */}
+      <Stack.Screen name="home" component={HomeScreen} />
       <Stack.Screen name="bootstrap" component={BootstrapScreen} />
+      <Stack.Screen name="list" component={ListScreen} />
     </Stack.Navigator>
   )
 }
