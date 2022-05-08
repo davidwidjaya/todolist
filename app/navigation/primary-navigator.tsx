@@ -2,13 +2,7 @@ import React from "react"
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
-  WelcomeScreen,
-  LoginScreen,
-  HomeScreen,
   BootstrapScreen,
-  OrderScreen,
-  ActivityScreen,
-  ProfileScreen,
 } from "../screens"
 
 import { PrimaryParamList } from "./types"
@@ -24,12 +18,7 @@ export function PrimaryNavigator() {
       }}
     >
       {/* <Stack.Screen name="welcome" component={WelcomeScreen} /> */}
-      <Stack.Screen name="login" component={LoginScreen} />
-      <Stack.Screen name="home" component={HomeScreen} />
       <Stack.Screen name="bootstrap" component={BootstrapScreen} />
-      <Stack.Screen name="activity" component={ActivityScreen} />
-      <Stack.Screen name="profile" component={ProfileScreen} />
-      <Stack.Screen name="order" component={OrderScreen} />
     </Stack.Navigator>
   )
 }
@@ -41,4 +30,4 @@ export function PrimaryNavigator() {
  * Anything not on this list will be a standard `back` action in
  * react-navigation.
  */
-export const exitRoutes: string[] = ["login"]
+export const exitRoutes: string[] = ["home"]
